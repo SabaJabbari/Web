@@ -1,0 +1,37 @@
+
+    <div id="{{ chart_title }}" class="chartItem"></div>
+
+    <script type="text/javascript">
+
+      var chart = JSC.chart('{{ chart_title }}', {
+        debug: true,
+        defaultSeries_type: 'column',
+        title_label_text: '{{ chart_setting.name }}',
+        yAxis: {
+          defaultTick_enabled: false,
+          scale_range_padding: 0.15
+        },
+        legend_visible: false,
+        toolbar_visible: false,
+        series: [
+          {
+            name: 'Social Network Users',
+            color: '{{ chart_setting.color }}',
+            defaultPoint: {
+              {#label: { text: '%value' }#}
+            },
+
+            points: [
+                {% for values in chartdata %}
+                    {
+                        name: '{{ values.0 }}',
+                        y: {{ values.1 }},
+                        tooltip: '<b>%name<b/> <br/>{{ values.1 }}',
+
+                    },
+                {% endfor %}
+            ]
+          }
+        ]
+      });
+    </script>

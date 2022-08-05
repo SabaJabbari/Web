@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jscharting.com/latest/jscharting.js"></script>
+    <script type="text/javascript" src="https://code.jscharting.com/latest/modules/maps.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header>
+    <div class="container m-2">
+        <nav>
+            <ul>
+                <li>about us</li>
+                <li>contact us</li>
+            </ul>
+            <div>
+                <h3>webpage title</h3>
+                <img class="logo" src="res/images/home.svg" alt="root">
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="container m-2">
+        <div class="filter">
+            <h6 class="filter-title">filter</h6>
+            <form action="" method="get" class="form-control">
+                <label for="date"></label>
+                <input type="date" name="date" id="date" pattern="\d{4}-\d{2}-\d{2}" value="2022-03-16" required>
+                <label for="country"></label>
+                <select name="country" id="country" required>
+
+                    <option value="AF">Afghanistan</option>
+
+
+                </select>
+                <div class="space"></div>
+                <button type="submit" class="my-button">search</button>
+            </form>
+        </div>
+        <div class="root-body">
+            <section>
+                <h2>Table</h2>
+                <table>
+                    <tr>
+                        <th>Company</th>
+                        <th>Contact</th>
+                        <th>Country</th>
+                        <th>Country</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr>
+                        <th>Company</th>
+                        <td>Maria Anders</td>
+                        <td>Maria Anders</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                    </tr>
+                    <tr>
+                        <th>Company</th>
+                        <td>Maria Anders</td>
+                        <td>Maria Anders</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                    </tr>
+                    <tr>
+                        <th>Company</th>
+                        <td>Maria Anders</td>
+                        <td>Maria Anders</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                    </tr>
+                    <tr>
+                        <th>Company</th>
+                        <td>Francisco Chang</td>
+                        <td>Francisco Chang</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Charts</h2>
+                <div class="chart">
+
+                    <div class="chartItem" id="new_cases"></div>
+                    <script type="text/javascript">
+                        var chart = JSC.chart('new_cases', {
+                            debug: true,
+                            defaultSeries_type: 'column',
+                            title_label_text: 'new_cases',
+                            yAxis: {
+                                defaultTick_enabled: false,
+                                scale_range_padding: 0.15
+                            },
+                            legend_visible: false,
+                            toolbar_visible: false,
+                            series: [
+                                {
+                                    name: 'Social Network Users',
+                                    color: '#ee4c7c',
+                                    defaultPoint: {},
+
+                                    points: [
+                                        {
+                                            name: 'Mar 25',
+                                            y: 7486,
+                                            tooltip: '<b>%name<b/> <br/>7486',
+                                        },
+                                        {
+                                            name: 'Apr 01',
+                                            y: 8503,
+                                            tooltip: '<b>%name<b/> <br/>8503',
+                                        },
+                                        {
+                                            name: 'Apr 08',
+                                            y: 12594,
+                                            tooltip: '<b>%name<b/> <br/>12594',
+                                        },
+                                        {
+                                            name: 'Apr 15',
+                                            y: 22117,
+                                            tooltip: '<b>%name<b/> <br/>22117',
+                                        },
+                                        {
+                                            name: 'Apr 22',
+                                            y: 24102,
+                                            tooltip: '<b>%name<b/> <br/>24102',
+                                        },
+                                        {
+                                            name: 'Apr 29',
+                                            y: 21609,
+                                            tooltip: '<b>%name<b/> <br/>21609',
+                                        },
+                                        {
+                                            name: 'May 06',
+                                            y: 19649,
+                                            tooltip: '<b>%name<b/> <br/>19649',
+                                        },
+                                        {
+                                            name: 'May 13',
+                                            y: 16516,
+                                            tooltip: '<b>%name<b/> <br/>16516',
+                                        },
+                                        {
+                                            name: 'May 20',
+                                            y: 12580,
+                                            tooltip: '<b>%name<b/> <br/>12580',
+                                        },
+                                        {
+                                            name: 'May 27',
+                                            y: 10854,
+                                            tooltip: '<b>%name<b/> <br/>10854',
+                                        },
+                                        {
+                                            name: 'Jun 03',
+                                            y: 9775,
+                                            tooltip: '<b>%name<b/> <br/>9775',
+                                        },
+                                        {
+                                            name: 'Jun 10',
+                                            y: 8042,
+                                            tooltip: '<b>%name<b/> <br/>8042',
+                                        },
+                                        {
+                                            name: 'Jun 17',
+                                            y: 9933,
+                                            tooltip: '<b>%name<b/> <br/>9933',
+                                        },
+                                        {
+                                            name: 'Jun 24',
+                                            y: 9670,
+                                            tooltip: '<b>%name<b/> <br/>9670',
+                                        },
+                                        {
+                                            name: 'Jul 01',
+                                            y: 10782,
+                                            tooltip: '<b>%name<b/> <br/>10782',
+                                        },
+                                        {
+                                            name: 'Jul 08',
+                                            y: 13445,
+                                            tooltip: '<b>%name<b/> <br/>13445',
+                                        },
+                                        {
+                                            name: 'Jul 15',
+                                            y: 18587,
+                                            tooltip: '<b>%name<b/> <br/>18587',
+
+                                        },
+                                        {
+                                            name: 'Jul 22',
+                                            y: 22731,
+                                            tooltip: '<b>%name<b/> <br/>22731',
+                                        },
+                                        {
+                                            name: 'Jul 29',
+                                            y: 26007,
+                                            tooltip: '<b>%name<b/> <br/>26007',
+                                        },
+                                        {
+                                            name: 'Aug 05',
+                                            y: 31647,
+                                            tooltip: '<b>%name<b/> <br/>31647',
+                                        },
+                                        {
+                                            name: 'Aug 12',
+                                            y: 36993,
+                                            tooltip: '<b>%name<b/> <br/>36993',
+                                        },
+                                        {
+                                            name: 'Aug 19',
+                                            y: 39795,
+                                            tooltip: '<b>%name<b/> <br/>39795',
+                                        },
+                                        {
+                                            name: 'Aug 26',
+                                            y: 34164,
+                                            tooltip: '<b>%name<b/> <br/>34164',
+                                        },
+                                        {
+                                            name: 'Sep 02',
+                                            y: 33667,
+                                            tooltip: '<b>%name<b/> <br/>33667',
+                                        },
+                                        {
+                                            name: 'Sep 09',
+                                            y: 27437,
+                                            tooltip: '<b>%name<b/> <br/>27437',
+                                        },
+                                        {
+                                            name: 'Sep 16',
+                                            y: 22362,
+                                            tooltip: '<b>%name<b/> <br/>22362',
+                                        },
+                                        {
+                                            name: 'Sep 23',
+                                            y: 17020,
+                                            tooltip: '<b>%name<b/> <br/>17020',
+                                        },
+                                        {
+                                            name: 'Sep 30',
+                                            y: 14271,
+                                            tooltip: '<b>%name<b/> <br/>14271',
+                                        },
+                                        {
+                                            name: 'Oct 07',
+                                            y: 13181,
+                                            tooltip: '<b>%name<b/> <br/>13181',
+                                        },
+                                        {
+                                            name: 'Oct 14',
+                                            y: 11118,
+                                            tooltip: '<b>%name<b/> <br/>11118',
+                                        },
+                                        {
+                                            name: 'Oct 21',
+                                            y: 11455,
+                                            tooltip: '<b>%name<b/> <br/>11455',
+                                        },
+                                        {
+                                            name: 'Oct 28',
+                                            y: 9641,
+                                            tooltip: '<b>%name<b/> <br/>9641',
+                                        },
+                                        {
+                                            name: 'Nov 04',
+                                            y: 9592,
+                                            tooltip: '<b>%name<b/> <br/>9592',
+                                        },
+                                        {
+                                            name: 'Nov 11',
+                                            y: 8552,
+                                            tooltip: '<b>%name<b/> <br/>8552',
+                                        },
+                                        {
+                                            name: 'Nov 18',
+                                            y: 6740,
+                                            tooltip: '<b>%name<b/> <br/>6740',
+                                        },
+                                        {
+                                            name: 'Nov 25',
+                                            y: 5195,
+                                            tooltip: '<b>%name<b/> <br/>5195',
+                                        },
+                                        {
+                                            name: 'Dec 02',
+                                            y: 4205,
+                                            tooltip: '<b>%name<b/> <br/>4205',
+                                        },
+                                        {
+                                            name: 'Dec 09',
+                                            y: 3413,
+                                            tooltip: '<b>%name<b/> <br/>3413',
+                                        },
+                                        {
+                                            name: 'Dec 16',
+                                            y: 2710,
+                                            tooltip: '<b>%name<b/> <br/>2710',
+                                        },
+                                        {
+                                            name: 'Dec 23',
+                                            y: 2211,
+                                            tooltip: '<b>%name<b/> <br/>2211',
+                                        },
+                                        {
+                                            name: 'Dec 30',
+                                            y: 1868,
+                                            tooltip: '<b>%name<b/> <br/>1868',
+                                        },
+
+                                        {
+                                            name: 'Jan 06',
+                                            y: 1634,
+                                            tooltip: '<b>%name<b/> <br/>1634',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 13',
+                                            y: 1429,
+                                            tooltip: '<b>%name<b/> <br/>1429',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 20',
+                                            y: 2507,
+                                            tooltip: '<b>%name<b/> <br/>2507',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 27',
+                                            y: 5673,
+                                            tooltip: '<b>%name<b/> <br/>5673',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 03',
+                                            y: 20098,
+                                            tooltip: '<b>%name<b/> <br/>20098',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 10',
+                                            y: 35657,
+                                            tooltip: '<b>%name<b/> <br/>35657',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 17',
+                                            y: 28916,
+                                            tooltip: '<b>%name<b/> <br/>28916',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 24',
+                                            y: 17626,
+                                            tooltip: '<b>%name<b/> <br/>17626',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 03',
+                                            y: 11015,
+                                            tooltip: '<b>%name<b/> <br/>11015',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 10',
+                                            y: 5917,
+                                            tooltip: '<b>%name<b/> <br/>5917',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 17',
+                                            y: 3996,
+                                            tooltip: '<b>%name<b/> <br/>3996',
+
+                                        },
+
+                                    ]
+                                }
+                            ]
+                        });
+                    </script>
+
+                    <div class="chartItem" id="cumulative_cases"></div>
+                    <script type="text/javascript">
+
+                        var chart = JSC.chart('cumulative_cases', {
+                            debug: true,
+                            defaultSeries_type: 'column',
+                            title_label_text: 'cumulative_cases',
+                            yAxis: {
+                                defaultTick_enabled: false,
+                                scale_range_padding: 0.15
+                            },
+                            legend_visible: false,
+                            toolbar_visible: false,
+                            series: [
+                                {
+                                    name: 'Social Network Users',
+                                    color: '#cb2626',
+                                    defaultPoint: {},
+
+                                    points: [
+
+                                        {
+                                            name: 'Mar 25',
+                                            y: 1793576,
+                                            tooltip: '<b>%name<b/> <br/>1793576',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 01',
+                                            y: 1847965,
+                                            tooltip: '<b>%name<b/> <br/>1847965',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 08',
+                                            y: 1921954,
+                                            tooltip: '<b>%name<b/> <br/>1921954',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 15',
+                                            y: 2050225,
+                                            tooltip: '<b>%name<b/> <br/>2050225',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 22',
+                                            y: 2215385,
+                                            tooltip: '<b>%name<b/> <br/>2215385',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 29',
+                                            y: 2376456,
+                                            tooltip: '<b>%name<b/> <br/>2376456',
+
+                                        },
+
+                                        {
+                                            name: 'May 06',
+                                            y: 2517303,
+                                            tooltip: '<b>%name<b/> <br/>2517303',
+
+                                        },
+
+                                        {
+                                            name: 'May 13',
+                                            y: 2641253,
+                                            tooltip: '<b>%name<b/> <br/>2641253',
+
+                                        },
+
+                                        {
+                                            name: 'May 20',
+                                            y: 2742552,
+                                            tooltip: '<b>%name<b/> <br/>2742552',
+
+                                        },
+
+                                        {
+                                            name: 'May 27',
+                                            y: 2824006,
+                                            tooltip: '<b>%name<b/> <br/>2824006',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 03',
+                                            y: 2894301,
+                                            tooltip: '<b>%name<b/> <br/>2894301',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 10',
+                                            y: 2959050,
+                                            tooltip: '<b>%name<b/> <br/>2959050',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 17',
+                                            y: 3020746,
+                                            tooltip: '<b>%name<b/> <br/>3020746',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 24',
+                                            y: 3088022,
+                                            tooltip: '<b>%name<b/> <br/>3088022',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 01',
+                                            y: 3159728,
+                                            tooltip: '<b>%name<b/> <br/>3159728',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 08',
+                                            y: 3244248,
+                                            tooltip: '<b>%name<b/> <br/>3244248',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 15',
+                                            y: 3359475,
+                                            tooltip: '<b>%name<b/> <br/>3359475',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 22',
+                                            y: 3505656,
+                                            tooltip: '<b>%name<b/> <br/>3505656',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 29',
+                                            y: 3672883,
+                                            tooltip: '<b>%name<b/> <br/>3672883',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 05',
+                                            y: 3880655,
+                                            tooltip: '<b>%name<b/> <br/>3880655',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 12',
+                                            y: 4126509,
+                                            tooltip: '<b>%name<b/> <br/>4126509',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 19',
+                                            y: 4394290,
+                                            tooltip: '<b>%name<b/> <br/>4394290',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 26',
+                                            y: 4650084,
+                                            tooltip: '<b>%name<b/> <br/>4650084',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 02',
+                                            y: 4896306,
+                                            tooltip: '<b>%name<b/> <br/>4896306',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 09',
+                                            y: 5105419,
+                                            tooltip: '<b>%name<b/> <br/>5105419',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 16',
+                                            y: 5276861,
+                                            tooltip: '<b>%name<b/> <br/>5276861',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 23',
+                                            y: 5410076,
+                                            tooltip: '<b>%name<b/> <br/>5410076',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 30',
+                                            y: 5520091,
+                                            tooltip: '<b>%name<b/> <br/>5520091',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 07',
+                                            y: 5612584,
+                                            tooltip: '<b>%name<b/> <br/>5612584',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 14',
+                                            y: 5694461,
+                                            tooltip: '<b>%name<b/> <br/>5694461',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 21',
+                                            y: 5775271,
+                                            tooltip: '<b>%name<b/> <br/>5775271',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 28',
+                                            y: 5851169,
+                                            tooltip: '<b>%name<b/> <br/>5851169',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 04',
+                                            y: 5916708,
+                                            tooltip: '<b>%name<b/> <br/>5916708',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 11',
+                                            y: 5980276,
+                                            tooltip: '<b>%name<b/> <br/>5980276',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 18',
+                                            y: 6032253,
+                                            tooltip: '<b>%name<b/> <br/>6032253',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 25',
+                                            y: 6073234,
+                                            tooltip: '<b>%name<b/> <br/>6073234',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 02',
+                                            y: 6105310,
+                                            tooltip: '<b>%name<b/> <br/>6105310',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 09',
+                                            y: 6131647,
+                                            tooltip: '<b>%name<b/> <br/>6131647',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 16',
+                                            y: 6152645,
+                                            tooltip: '<b>%name<b/> <br/>6152645',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 23',
+                                            y: 6169314,
+                                            tooltip: '<b>%name<b/> <br/>6169314',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 30',
+                                            y: 6183248,
+                                            tooltip: '<b>%name<b/> <br/>6183248',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 06',
+                                            y: 6195580,
+                                            tooltip: '<b>%name<b/> <br/>6195580',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 13',
+                                            y: 6205296,
+                                            tooltip: '<b>%name<b/> <br/>6205296',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 20',
+                                            y: 6219472,
+                                            tooltip: '<b>%name<b/> <br/>6219472',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 27',
+                                            y: 6247414,
+                                            tooltip: '<b>%name<b/> <br/>6247414',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 03',
+                                            y: 6333048,
+                                            tooltip: '<b>%name<b/> <br/>6333048',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 10',
+                                            y: 6550134,
+                                            tooltip: '<b>%name<b/> <br/>6550134',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 17',
+                                            y: 6781655,
+                                            tooltip: '<b>%name<b/> <br/>6781655',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 24',
+                                            y: 6928177,
+                                            tooltip: '<b>%name<b/> <br/>6928177',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 03',
+                                            y: 7031199,
+                                            tooltip: '<b>%name<b/> <br/>7031199',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 10',
+                                            y: 7084802,
+                                            tooltip: '<b>%name<b/> <br/>7084802',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 17',
+                                            y: 7119742,
+                                            tooltip: '<b>%name<b/> <br/>7119742',
+
+                                        },
+
+                                    ]
+                                }
+                            ]
+                        });
+                    </script>
+
+                    <div class="chartItem" id="new_deaths"></div>
+                    <script type="text/javascript">
+
+
+                        var chart = JSC.chart('new_deaths', {
+                            debug: true,
+                            defaultSeries_type: 'column',
+                            title_label_text: 'new_deaths',
+                            yAxis: {
+                                defaultTick_enabled: false,
+                                scale_range_padding: 0.15
+                            },
+                            legend_visible: false,
+                            toolbar_visible: false,
+                            series: [
+                                {
+                                    name: 'Social Network Users',
+                                    color: '#e3afbc',
+                                    defaultPoint: {},
+
+                                    points: [
+
+                                        {
+                                            name: 'Mar 25',
+                                            y: 75,
+                                            tooltip: '<b>%name<b/> <br/>75',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 01',
+                                            y: 88,
+                                            tooltip: '<b>%name<b/> <br/>88',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 08',
+                                            y: 134,
+                                            tooltip: '<b>%name<b/> <br/>134',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 15',
+                                            y: 221,
+                                            tooltip: '<b>%name<b/> <br/>221',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 22',
+                                            y: 353,
+                                            tooltip: '<b>%name<b/> <br/>353',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 29',
+                                            y: 430,
+                                            tooltip: '<b>%name<b/> <br/>430',
+
+                                        },
+
+                                        {
+                                            name: 'May 06',
+                                            y: 384,
+                                            tooltip: '<b>%name<b/> <br/>384',
+
+                                        },
+
+                                        {
+                                            name: 'May 13',
+                                            y: 336,
+                                            tooltip: '<b>%name<b/> <br/>336',
+
+                                        },
+
+                                        {
+                                            name: 'May 20',
+                                            y: 281,
+                                            tooltip: '<b>%name<b/> <br/>281',
+
+                                        },
+
+                                        {
+                                            name: 'May 27',
+                                            y: 218,
+                                            tooltip: '<b>%name<b/> <br/>218',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 03',
+                                            y: 182,
+                                            tooltip: '<b>%name<b/> <br/>182',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 10',
+                                            y: 148,
+                                            tooltip: '<b>%name<b/> <br/>148',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 17',
+                                            y: 141,
+                                            tooltip: '<b>%name<b/> <br/>141',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 24',
+                                            y: 124,
+                                            tooltip: '<b>%name<b/> <br/>124',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 01',
+                                            y: 130,
+                                            tooltip: '<b>%name<b/> <br/>130',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 08',
+                                            y: 138,
+                                            tooltip: '<b>%name<b/> <br/>138',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 15',
+                                            y: 159,
+                                            tooltip: '<b>%name<b/> <br/>159',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 22',
+                                            y: 202,
+                                            tooltip: '<b>%name<b/> <br/>202',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 29',
+                                            y: 265,
+                                            tooltip: '<b>%name<b/> <br/>265',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 05',
+                                            y: 329,
+                                            tooltip: '<b>%name<b/> <br/>329',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 12',
+                                            y: 475,
+                                            tooltip: '<b>%name<b/> <br/>475',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 19',
+                                            y: 571,
+                                            tooltip: '<b>%name<b/> <br/>571',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 26',
+                                            y: 607,
+                                            tooltip: '<b>%name<b/> <br/>607',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 02',
+                                            y: 634,
+                                            tooltip: '<b>%name<b/> <br/>634',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 09',
+                                            y: 585,
+                                            tooltip: '<b>%name<b/> <br/>585',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 16',
+                                            y: 468,
+                                            tooltip: '<b>%name<b/> <br/>468',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 23',
+                                            y: 391,
+                                            tooltip: '<b>%name<b/> <br/>391',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 30',
+                                            y: 283,
+                                            tooltip: '<b>%name<b/> <br/>283',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 07',
+                                            y: 239,
+                                            tooltip: '<b>%name<b/> <br/>239',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 14',
+                                            y: 217,
+                                            tooltip: '<b>%name<b/> <br/>217',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 21',
+                                            y: 192,
+                                            tooltip: '<b>%name<b/> <br/>192',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 28',
+                                            y: 157,
+                                            tooltip: '<b>%name<b/> <br/>157',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 04',
+                                            y: 157,
+                                            tooltip: '<b>%name<b/> <br/>157',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 11',
+                                            y: 134,
+                                            tooltip: '<b>%name<b/> <br/>134',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 18',
+                                            y: 122,
+                                            tooltip: '<b>%name<b/> <br/>122',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 25',
+                                            y: 111,
+                                            tooltip: '<b>%name<b/> <br/>111',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 02',
+                                            y: 92,
+                                            tooltip: '<b>%name<b/> <br/>92',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 09',
+                                            y: 75,
+                                            tooltip: '<b>%name<b/> <br/>75',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 16',
+                                            y: 68,
+                                            tooltip: '<b>%name<b/> <br/>68',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 23',
+                                            y: 48,
+                                            tooltip: '<b>%name<b/> <br/>48',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 30',
+                                            y: 44,
+                                            tooltip: '<b>%name<b/> <br/>44',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 06',
+                                            y: 37,
+                                            tooltip: '<b>%name<b/> <br/>37',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 13',
+                                            y: 29,
+                                            tooltip: '<b>%name<b/> <br/>29',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 20',
+                                            y: 25,
+                                            tooltip: '<b>%name<b/> <br/>25',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 27',
+                                            y: 23,
+                                            tooltip: '<b>%name<b/> <br/>23',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 03',
+                                            y: 33,
+                                            tooltip: '<b>%name<b/> <br/>33',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 10',
+                                            y: 78,
+                                            tooltip: '<b>%name<b/> <br/>78',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 17',
+                                            y: 144,
+                                            tooltip: '<b>%name<b/> <br/>144',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 24',
+                                            y: 207,
+                                            tooltip: '<b>%name<b/> <br/>207',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 03',
+                                            y: 224,
+                                            tooltip: '<b>%name<b/> <br/>224',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 10',
+                                            y: 171,
+                                            tooltip: '<b>%name<b/> <br/>171',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 17',
+                                            y: 131,
+                                            tooltip: '<b>%name<b/> <br/>131',
+
+                                        },
+
+                                    ]
+                                }
+                            ]
+                        });
+                    </script>
+
+                    <div class="chartItem" id="cumulative_deaths"></div>
+                    <script type="text/javascript">
+
+                        var chart = JSC.chart('cumulative_deaths', {
+                            debug: true,
+                            defaultSeries_type: 'column',
+                            title_label_text: 'cumulative_deaths',
+                            yAxis: {
+                                defaultTick_enabled: false,
+                                scale_range_padding: 0.15
+                            },
+                            legend_visible: false,
+                            toolbar_visible: false,
+                            series: [
+                                {
+                                    name: 'Social Network Users',
+                                    color: '#5d001e',
+                                    defaultPoint: {},
+
+                                    points: [
+
+                                        {
+                                            name: 'Mar 25',
+                                            y: 61724,
+                                            tooltip: '<b>%name<b/> <br/>61724',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 01',
+                                            y: 62309,
+                                            tooltip: '<b>%name<b/> <br/>62309',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 08',
+                                            y: 63042,
+                                            tooltip: '<b>%name<b/> <br/>63042',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 15',
+                                            y: 64309,
+                                            tooltip: '<b>%name<b/> <br/>64309',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 22',
+                                            y: 66394,
+                                            tooltip: '<b>%name<b/> <br/>66394',
+
+                                        },
+
+                                        {
+                                            name: 'Apr 29',
+                                            y: 69189,
+                                            tooltip: '<b>%name<b/> <br/>69189',
+
+                                        },
+
+                                        {
+                                            name: 'May 06',
+                                            y: 72106,
+                                            tooltip: '<b>%name<b/> <br/>72106',
+
+                                        },
+
+                                        {
+                                            name: 'May 13',
+                                            y: 74568,
+                                            tooltip: '<b>%name<b/> <br/>74568',
+
+                                        },
+
+                                        {
+                                            name: 'May 20',
+                                            y: 76703,
+                                            tooltip: '<b>%name<b/> <br/>76703',
+
+                                        },
+
+                                        {
+                                            name: 'May 27',
+                                            y: 78405,
+                                            tooltip: '<b>%name<b/> <br/>78405',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 03',
+                                            y: 79762,
+                                            tooltip: '<b>%name<b/> <br/>79762',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 10',
+                                            y: 80930,
+                                            tooltip: '<b>%name<b/> <br/>80930',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 17',
+                                            y: 81938,
+                                            tooltip: '<b>%name<b/> <br/>81938',
+
+                                        },
+
+                                        {
+                                            name: 'Jun 24',
+                                            y: 82855,
+                                            tooltip: '<b>%name<b/> <br/>82855',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 01',
+                                            y: 83723,
+                                            tooltip: '<b>%name<b/> <br/>83723',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 08',
+                                            y: 84662,
+                                            tooltip: '<b>%name<b/> <br/>84662',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 15',
+                                            y: 85715,
+                                            tooltip: '<b>%name<b/> <br/>85715',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 22',
+                                            y: 86986,
+                                            tooltip: '<b>%name<b/> <br/>86986',
+
+                                        },
+
+                                        {
+                                            name: 'Jul 29',
+                                            y: 88587,
+                                            tooltip: '<b>%name<b/> <br/>88587',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 05',
+                                            y: 90717,
+                                            tooltip: '<b>%name<b/> <br/>90717',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 12',
+                                            y: 93587,
+                                            tooltip: '<b>%name<b/> <br/>93587',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 19',
+                                            y: 97319,
+                                            tooltip: '<b>%name<b/> <br/>97319',
+
+                                        },
+
+                                        {
+                                            name: 'Aug 26',
+                                            y: 101450,
+                                            tooltip: '<b>%name<b/> <br/>101450',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 02',
+                                            y: 105908,
+                                            tooltip: '<b>%name<b/> <br/>105908',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 09',
+                                            y: 110117,
+                                            tooltip: '<b>%name<b/> <br/>110117',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 16',
+                                            y: 113829,
+                                            tooltip: '<b>%name<b/> <br/>113829',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 23',
+                                            y: 116790,
+                                            tooltip: '<b>%name<b/> <br/>116790',
+
+                                        },
+
+                                        {
+                                            name: 'Sep 30',
+                                            y: 119066,
+                                            tooltip: '<b>%name<b/> <br/>119066',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 07',
+                                            y: 120879,
+                                            tooltip: '<b>%name<b/> <br/>120879',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 14',
+                                            y: 122414,
+                                            tooltip: '<b>%name<b/> <br/>122414',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 21',
+                                            y: 123871,
+                                            tooltip: '<b>%name<b/> <br/>123871',
+
+                                        },
+
+                                        {
+                                            name: 'Oct 28',
+                                            y: 125062,
+                                            tooltip: '<b>%name<b/> <br/>125062',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 04',
+                                            y: 126156,
+                                            tooltip: '<b>%name<b/> <br/>126156',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 11',
+                                            y: 127171,
+                                            tooltip: '<b>%name<b/> <br/>127171',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 18',
+                                            y: 128043,
+                                            tooltip: '<b>%name<b/> <br/>128043',
+
+                                        },
+
+                                        {
+                                            name: 'Nov 25',
+                                            y: 128849,
+                                            tooltip: '<b>%name<b/> <br/>128849',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 02',
+                                            y: 129548,
+                                            tooltip: '<b>%name<b/> <br/>129548',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 09',
+                                            y: 130132,
+                                            tooltip: '<b>%name<b/> <br/>130132',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 16',
+                                            y: 130650,
+                                            tooltip: '<b>%name<b/> <br/>130650',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 23',
+                                            y: 131033,
+                                            tooltip: '<b>%name<b/> <br/>131033',
+
+                                        },
+
+                                        {
+                                            name: 'Dec 30',
+                                            y: 131348,
+                                            tooltip: '<b>%name<b/> <br/>131348',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 06',
+                                            y: 131637,
+                                            tooltip: '<b>%name<b/> <br/>131637',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 13',
+                                            y: 131854,
+                                            tooltip: '<b>%name<b/> <br/>131854',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 20',
+                                            y: 132047,
+                                            tooltip: '<b>%name<b/> <br/>132047',
+
+                                        },
+
+                                        {
+                                            name: 'Jan 27',
+                                            y: 132202,
+                                            tooltip: '<b>%name<b/> <br/>132202',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 03',
+                                            y: 132393,
+                                            tooltip: '<b>%name<b/> <br/>132393',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 10',
+                                            y: 132775,
+                                            tooltip: '<b>%name<b/> <br/>132775',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 17',
+                                            y: 133589,
+                                            tooltip: '<b>%name<b/> <br/>133589',
+
+                                        },
+
+                                        {
+                                            name: 'Feb 24',
+                                            y: 134840,
+                                            tooltip: '<b>%name<b/> <br/>134840',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 03',
+                                            y: 136395,
+                                            tooltip: '<b>%name<b/> <br/>136395',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 10',
+                                            y: 137767,
+                                            tooltip: '<b>%name<b/> <br/>137767',
+
+                                        },
+
+                                        {
+                                            name: 'Mar 17',
+                                            y: 138820,
+                                            tooltip: '<b>%name<b/> <br/>138820',
+
+                                        },
+
+                                    ]
+                                }
+                            ]
+                        });
+                    </script>
+                </div>
+            </section>
+
+            <section>
+                <h2>Map</h2>
+                <div class="map">
+
+                    <div class="mapItem"  id="mapDiv"></div>
+
+                    <script type="text/javascript">
+                        var mapData = JSON.parse('[[\u0022AF\u0022, 162, 176571, 1, 7646], [\u0022AL\u0022, 22, 272711, 1, 3486], [\u0022DZ\u0022, 21, 265478, 2, 6868], [\u0022AD\u0022, 0, 38794, 0, 152], [\u0022AO\u0022, 25, 98956, 0, 1900], [\u0022AI\u0022, 20, 2594, 0, 9], [\u0022AG\u0022, 4, 7470, 0, 135], [\u0022AR\u0022, 5076, 8981155, 38, 127295], [\u0022AM\u0022, 79, 422155, 8, 8587], [\u0022AW\u0022, 85, 33817, 0, 212], [\u0022AU\u0022, 258366, 3470836, 25, 5616], [\u0022AT\u0022, 36792, 3256683, 31, 14609], [\u0022AZ\u0022, 142, 790962, 9, 9627], [\u0022BS\u0022, 0, 33200, 0, 773], [\u0022BH\u0022, 1194, 539988, 1, 1464], [\u0022BD\u0022, 182, 1950124, 0, 29112], [\u0022BB\u0022, 79, 57102, 1, 326], [\u0022BY\u0022, 693, 943027, 11, 6681], [\u0022BE\u0022, 8039, 3683773, 11, 30487], [\u0022BZ\u0022, 37, 57071, 0, 652], [\u0022BJ\u0022, 377, 26952, 0, 163], [\u0022BM\u0022, 90, 11989, 1, 125], [\u0022BT\u0022, 681, 20116, 0, 7], [\u0022BO\u0022, 434, 898404, 1, 21476], [\u0022BA\u0022, 147, 373506, 6, 15641], [\u0022BW\u0022, 0, 263950, 0, 2619], [\u0022BR\u0022, 11287, 29380063, 171, 655249], [\u0022VG\u0022, 13, 6104, 0, 62], [\u0022BN\u0022, 2511, 116882, 1, 120], [\u0022BG\u0022, 2393, 1117525, 34, 36196], [\u0022BF\u0022, 0, 20751, 0, 375], [\u0022BI\u0022, 17, 38296, 0, 15], [\u0022CV\u0022, 4, 55911, 0, 401], [\u0022KH\u0022, 139, 134352, 1, 3048], [\u0022CM\u0022, 92, 119414, 0, 1926], [\u0022CA\u0022, 7150, 3367292, 63, 36944], [\u0022KY\u0022, 0, 20073, 0, 22], [\u0022CF\u0022, 0, 14327, 0, 113], [\u0022TD\u0022, 0, 7269, 0, 190], [\u0022CL\u0022, 10082, 3323324, 34, 44039], [\u0022CN\u0022, 13947, 791571, 289, 10057], [\u0022CO\u0022, 469, 6077288, 18, 139315], [\u0022KM\u0022, 9, 8072, 0, 160], [\u0022CG\u0022, 0, 24049, 0, 378], [\u0022CR\u0022, 454, 825158, 8, 8186], [\u0022CI\u0022, 18, 81616, 0, 796], [\u0022HR\u0022, 1179, 1074706, 19, 15373], [\u0022CU\u0022, 561, 1077966, 0, 8503], [\u0022CW\u0022, 375, 39560, 1, 265], [\u0022CY\u0022, 3294, 360078, 2, 904], [\u0022CZ\u0022, 10715, 3707622, 19, 39259], [\u0022KP\u0022, 0, 0, 0, 0], [\u0022CD\u0022, 51, 86426, 0, 1335], [\u0022DK\u0022, 9947, 2968444, 36, 5232], [\u0022DJ\u0022, 0, 15568, 0, 189], [\u0022DM\u0022, 0, 11529, 0, 62], [\u0022DO\u0022, 90, 576788, 0, 4374], [\u0022EC\u0022, 313, 849699, 1, 35348], [\u0022EG\u0022, 0, 495373, 0, 24277], [\u0022SV\u0022, 0, 156364, 0, 4101], [\u0022GQ\u0022, 0, 15898, 0, 183], [\u0022ER\u0022, 0, 9722, 0, 103], [\u0022EE\u0022, 2136, 536924, 4, 2371], [\u0022SZ\u0022, 19, 69478, 0, 1392], [\u0022ET\u0022, 69, 469291, 0, 7486], [\u0022FJ\u0022, 60, 64141, 0, 834], [\u0022FI\u0022, 4836, 782127, 0, 2783], [\u0022FR\u0022, 113572, 22938252, 146, 137293], [\u0022GA\u0022, 0, 47570, 0, 303], [\u0022GM\u0022, 0, 11973, 0, 365], [\u0022GE\u0022, 1099, 1638790, 10, 16595], [\u0022DE\u0022, 262593, 17695210, 269, 126142], [\u0022GH\u0022, 45, 160761, 0, 1445], [\u0022GR\u0022, 26620, 2684916, 51, 26686], [\u0022GL\u0022, 6, 11901, 0, 20], [\u0022GD\u0022, 0, 13690, 0, 216], [\u0022GU\u0022, 142, 39157, 1, 339], [\u0022GT\u0022, 363, 805393, 6, 17159], [\u0022GN\u0022, 0, 36435, 0, 440], [\u0022GW\u0022, 3, 8071, 1, 169], [\u0022GY\u0022, 3, 63147, 1, 1225], [\u0022HT\u0022, 0, 30478, 0, 827], [\u0022HN\u0022, 472, 417201, 8, 10842], [\u0022HU\u0022, 4902, 1819264, 178, 44831], [\u0022IS\u0022, 2080, 167379, 4, 87], [\u0022IN\u0022, 2876, 42998938, 98, 516072], [\u0022ID\u0022, 13018, 5927550, 230, 152975], [\u0022IR\u0022, 3223, 7130129, 117, 139180], [\u0022IQ\u0022, 573, 2313943, 4, 25109], [\u0022IE\u0022, 6282, 1360015, 12, 6636], [\u0022IM\u0022, 323, 25019, 0, 81], [\u0022IL\u0022, 6338, 3733387, 2, 10404], [\u0022IT\u0022, 86414, 13489319, 180, 157177], [\u0022JM\u0022, 18, 128418, 1, 2851], [\u0022JP\u0022, 45649, 5853891, 180, 26442], [\u0022JE\u0022, 383, 42018, 0, 116], [\u0022JO\u0022, 0, 1680179, 0, 13959], [\u0022KZ\u0022, 121, 1393103, 2, 18997], [\u0022KE\u0022, 9, 323204, 1, 5647], [\u0022XK\u0022, 22, 226874, 0, 3116], [\u0022KW\u0022, 270, 626384, 0, 2552], [\u0022KG\u0022, 5, 200763, 1, 2975], [\u0022LA\u0022, 722, 147409, 1, 643], [\u0022LV\u0022, 6250, 750683, 6, 5435], [\u0022LB\u0022, 614, 1085846, 8, 10219], [\u0022LS\u0022, 0, 32775, 0, 697], [\u0022LR\u0022, 0, 7397, 0, 294], [\u0022LY\u0022, 193, 500497, 4, 6354], [\u0022LI\u0022, 183, 14822, 0, 77], [\u0022LT\u0022, 6010, 975213, 11, 8680], [\u0022LU\u0022, 907, 194846, 1, 1007], [\u0022MG\u0022, 0, 63870, 0, 1377], [\u0022MW\u0022, 11, 85515, 1, 2624], [\u0022MY\u0022, 26534, 3872135, 95, 33994], [\u0022ML\u0022, 5, 30429, 0, 726], [\u0022MT\u0022, 194, 73192, 2, 617], [\u0022MR\u0022, 1, 58660, 0, 981], [\u0022MX\u0022, 0, 5607845, 0, 321115], [\u0022MC\u0022, 74, 9901, 0, 52], [\u0022MN\u0022, 252, 916281, 0, 2105], [\u0022ME\u0022, 103, 231714, 0, 2693], [\u0022MS\u0022, 5, 171, 0, 2], [\u0022MA\u0022, 111, 1162236, 3, 16046], [\u0022MZ\u0022, 9, 225188, 0, 2198], [\u0022MM\u0022, 489, 607399, 3, 19417], [\u0022NA\u0022, 9, 157458, 0, 4014], [\u0022NR\u0022, 0, 0, 0, 0], [\u0022NP\u0022, 41, 978085, 0, 11950], [\u0022NL\u0022, 52936, 7266944, 12, 21725], [\u0022NC\u0022, 196, 59754, 0, 305], [\u0022NZ\u0022, 19485, 417823, 24, 141], [\u0022NI\u0022, 62, 14170, 2, 228], [\u0022NE\u0022, 0, 8781, 0, 308], [\u0022NG\u0022, 12, 255001, 0, 3142], [\u0022NU\u0022, 0, 1, 0, 0], [\u0022MK\u0022, 312, 301896, 1, 9158], [\u0022NO\u0022, 6998, 1361513, 0, 1823], [\u0022PS\u0022, 0, 654068, 0, 5622], [\u0022OM\u0022, 183, 386829, 0, 4250], [\u0022PK\u0022, 473, 1519627, 4, 30313], [\u0022PA\u0022, 146, 759782, 3, 8140], [\u0022PG\u0022, 0, 41533, 0, 639], [\u0022PY\u0022, 171, 646054, 10, 18548], [\u0022PE\u0022, 346, 3536842, 33, 211579], [\u0022PH\u0022, 383, 3671676, 0, 57625], [\u0022PL\u0022, 14475, 5851147, 151, 113773], [\u0022PT\u0022, 0, 3413013, 0, 21342], [\u0022PR\u0022, 107, 476209, 2, 4152], [\u0022QA\u0022, 102, 359361, 0, 677], [\u0022KR\u0022, 400730, 7629264, 164, 11052], [\u0022MD\u0022, 339, 508917, 11, 11368], [\u0022RO\u0022, 4854, 2798935, 69, 64450], [\u0022RU\u0022, 36519, 17449438, 576, 362478], [\u0022RW\u0022, 8, 129610, 0, 1459], [\u0022KN\u0022, 1, 5541, 0, 42], [\u0022LC\u0022, 3, 22856, 0, 365], [\u0022MF\u0022, 0, 9908, 0, 44], [\u0022PM\u0022, 0, 1335, 0, 1], [\u0022VC\u0022, 0, 8326, 0, 106], [\u0022WS\u0022, 0, 48, 0, 0], [\u0022SM\u0022, 45, 14834, 0, 112], [\u0022ST\u0022, 1, 5937, 0, 72], [\u0022SA\u0022, 129, 749044, 1, 9021], [\u0022SN\u0022, 2, 85808, 0, 1964], [\u0022RS\u0022, 2415, 1945142, 15, 15619], [\u0022SL\u0022, 0, 7667, 0, 125], [\u0022SG\u0022, 15851, 964329, 6, 1159], [\u0022SX\u0022, 43, 9629, 0, 85], [\u0022SK\u0022, 11528, 1597668, 30, 19009], [\u0022SI\u0022, 4213, 923038, 0, 7238], [\u0022SB\u0022, 288, 9412, 1, 123], [\u0022SO\u0022, 0, 26410, 0, 1361], [\u0022ZA\u0022, 1648, 3696823, 2, 99727], [\u0022SS\u0022, 6, 17073, 0, 138], [\u0022ES\u0022, 17907, 11268226, 47, 101350], [\u0022LK\u0022, 320, 657134, 1, 16416], [\u0022SD\u0022, 0, 61715, 0, 4874], [\u0022SR\u0022, 30, 78793, 0, 1321], [\u0022SE\u0022, 882, 2470353, 6, 17937], [\u0022CH\u0022, 18268, 3192119, 3, 12819], [\u0022SY\u0022, 32, 55431, 1, 3118], [\u0022TJ\u0022, 0, 17786, 0, 125], [\u0022TH\u0022, 23945, 3250642, 70, 23918], [\u0022GB\u0022, 93269, 19863315, 62, 163231], [\u0022TG\u0022, 0, 36860, 0, 272], [\u0022TO\u0022, 0, 2072, 0, 2], [\u0022TT\u0022, 218, 133151, 2, 3686], [\u0022TN\u0022, 166, 1029762, 3, 28065], [\u0022TR\u0022, 24614, 14599792, 115, 96735], [\u0022TM\u0022, 0, 0, 0, 0], [\u0022TC\u0022, 0, 5874, 0, 36], [\u0022UG\u0022, 12, 163609, 2, 3594], [\u0022UA\u0022, 5229, 4917757, 71, 107340], [\u0022AE\u0022, 280, 885983, 0, 2302], [\u0022TZ\u0022, 47, 33773, 0, 800], [\u0022US\u0022, 71241, 78865157, \u002D2094, 958609], [\u0022VI\u0022, 11, 15567, 0, 109], [\u0022UY\u0022, 1268, 865644, 8, 7103], [\u0022UZ\u0022, 60, 237341, 0, 1637], [\u0022VU\u0022, 59, 348, 0, 0], [\u0022VE\u0022, 50, 518460, 1, 5659], [\u0022VN\u0022, 175480, 6552918, 68, 41545], [\u0022YE\u0022, 0, 11793, 0, 2139], [\u0022ZM\u0022, 0, 315202, 0, 3960], [\u0022ZW\u0022, 456, 243365, 1, 5417]]');
+                        var chart = JSC.chart('mapDiv', {
+                            type: 'map',
+                            title_label_text: 'Cumulative Cases',
+                            defaultPoint: {
+                                label_text: '%countryCode',
+                            },
+
+                            /* Pad the map data points for separation from the chart area boundary. */
+                            defaultSeries_shape_padding: 0.2,
+                            legend_visible: false,
+                            series: [
+                                {
+                                    map: 'world',
+                                    points: mapData.map(function (arrItem) {
+                                        return {
+                                            map: arrItem[0],
+
+                                            tooltip: '<b>%name<b/> <br/>New Cases: ' + arrItem[1] + '<br/>Cumulative Cases: ' + arrItem[2] + '<br/>New Deaths: ' + arrItem[3] + '<br/>Cumulative Deaths: ' + arrItem[4],
+                                        };
+                                    })
+                                }
+                            ]
+                        });
+                    </script>
+
+                </div>
+            </section>
+
+            <section>
+                <h2>Blogs</h2>
+                <div class="blogs">
+                    <ul>
+                        <li>
+                            <div class="blog">
+                                <h6>Blog 1</h6>
+                                <div class="blog-header">
+                                    <span>written by ...</span>
+                                    <span>11-12-2021</span>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur dicta, doloremque eaque est expedita hic, illo incidunt maiores necessitatibus, officia perferendis quaerat quod reprehenderit saepe tempore temporibus tenetur voluptatibus?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="blog">
+                                <h6>Blog 1</h6>
+                                <div class="blog-header">
+                                    <span>written by ...</span>
+                                    <span>11-12-2021</span>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur dicta, doloremque eaque est expedita hic, illo incidunt maiores necessitatibus, officia perferendis quaerat quod reprehenderit saepe tempore temporibus tenetur voluptatibus?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="blog">
+                                <h6>Blog 1</h6>
+                                <div class="blog-header">
+                                    <span>written by ...</span>
+                                    <span>11-12-2021</span>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur dicta, doloremque eaque est expedita hic, illo incidunt maiores necessitatibus, officia perferendis quaerat quod reprehenderit saepe tempore temporibus tenetur voluptatibus?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="blog">
+                                <h6>Blog 1</h6>
+                                <div class="blog-header">
+                                    <span>written by ...</span>
+                                    <span>11-12-2021</span>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consectetur dicta, doloremque eaque est expedita hic, illo incidunt maiores necessitatibus, officia perferendis quaerat quod reprehenderit saepe tempore temporibus tenetur voluptatibus?
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

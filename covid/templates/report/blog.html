@@ -1,0 +1,16 @@
+                    <ul>
+                        {% for post in blog %}
+                        <li>
+                            <div class="blog">
+                                <h6>{{ post.title }}</h6>
+                                <div class="blog-header">
+                                    <span>Written By {{ post.author }}</span>
+                                    <span>{{ post.get_date }}</span>
+                                </div>
+                                <p>
+                                    {{ post.content }}
+                                </p>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>

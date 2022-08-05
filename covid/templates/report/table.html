@@ -1,0 +1,33 @@
+                <table>
+                    <tr>
+                        <th>Cases</th>
+                        <th>New Cases</th>
+                        <th>Cumulative Cases</th>
+                        <th>New Deaths</th>
+                        <th>Cumulative Deaths</th>
+                    </tr>
+                    <tr>
+                        <th>{{ tabledata.country }}</th>
+                        <td>{{ tabledata.new_cases }}</td>
+                        <td>{{ tabledata.cumulative_cases }}</td>
+                        <td>{{ tabledata.new_deaths }}</td>
+                        <td>{{ tabledata.cumulative_deaths }}</td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <th>Vaccinated</th>
+                        <th>Total Vaccinations</th>
+                        <th>Total Vaccinations Per100</th>
+                        <th>Persons Fully Vaccinated</th>
+                        <th>Persons Fully Vaccinated Per100</th>
+                    </tr>
+                    <tr>
+                        <th>{{ tabledata.country }}</th>
+                        <td>{{ tabledata.total_vaccinations }}</td>
+                        <td>{{ tabledata.total_vaccinations_per100 }}</td>
+                        <td>{{ tabledata.persons_fully_vaccinated }}</td>
+                        <td>{{ tabledata.persons_fully_vaccinated_per100 }}</td>
+                    </tr>
+                </table>

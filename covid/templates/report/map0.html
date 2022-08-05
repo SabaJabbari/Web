@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Map Thematic Sales | JSCharting</title>
+    <meta http-equiv="content-type" content="text-html; charset=utf-8" />
+
+{#    <script type="text/javascript" src="../jsc/jscharting.js"></script>#}
+
+    <script type="text/javascript" src="https://code.jscharting.com/latest/jscharting.js"></script>
+    <script type="text/javascript" src="https://code.jscharting.com/latest/modules/maps.js"></script>
+
+
+
+{#    <script type="text/javascript" src="../jsc/modules/maps.js"></script>#}
+
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <style type="text/css">
+      /*CSS*/
+    </style>
+  </head>
+  <body>
+{#    <div id="chartDiv" style="max-width: 740px;height: 480px;margin: 0px auto;"></div>#}
+    <div id="chartDiv" style="max-width: 95%;height: 600px;margin: 0px auto;"></div>
+    <script type="text/javascript">
+      var mapData = JSON.parse('{{ mapdata|escapejs }}');
+      var chart = JSC.chart('chartDiv', {
+        {#debug: true,#}
+        type: 'map',
+        title_label_text: 'Cumulative Cases',
+        {# palette: { #}
+        {#  /* A function to get the point value performs better. */#}
+        {#  pointValue: function(p) {#}
+        {#    return p.options('z');#}
+        {#  },#}
+        {#  colors: ['#ffffcc', '#ffeda0', '#feb24c', '#fd8d3c', '#fc4e2a', '#e31a1c', '#b00026'],#}
+        {#  ranges: { min: {{ mapdata_min }}, max: {{ mapdata_max }}, interval: {{ mapdata_interval }} }#}
+        {# }, #}
+        {#legend_title_label_text: 'Units Sold',#}
+        defaultPoint: {
+          label_text: '%countryCode',
+          tooltip: '<b>%name<b/> <br/>Cumulative Cases: %zValue '
+        },
+
+        /* Pad the map data points for separation from the chart area boundary. */
+        defaultSeries_shape_padding: 0.2,
+        series: [
+          {
+            map: 'world',
+            points: mapData.map(function(arrItem) {
+              return {
+                map: arrItem[0],
+                z: arrItem[1]
+              };
+            })
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>

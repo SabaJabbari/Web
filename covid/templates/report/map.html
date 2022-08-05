@@ -1,0 +1,29 @@
+    <div id="mapDiv" class="mapItem"></div>
+
+    <script type="text/javascript">
+      var mapData = JSON.parse('{{ mapdata|escapejs }}');
+      var chart = JSC.chart('mapDiv', {
+        type: 'map',
+        title_label_text: 'Cumulative Cases',
+        defaultPoint: {
+          {#label_text: '%countryCode',#}
+          {#tooltip: '<b>%name<b/> <br/>New Cases: %zValue <br/>Cumulative Cases: %z1Value <br/>New Deaths: %z2Value <br/>Cumulative Deaths: %cdValue '#}
+        },
+
+        /* Pad the map data points for separation from the chart area boundary. */
+        defaultSeries_shape_padding: 0.2,
+        legend_visible: false,
+        series: [
+          {
+            map: 'world',
+            points: mapData.map(function(arrItem) {
+              return {
+                map: arrItem[0],
+                {#tooltip: "<b>%name</b> <br/>"+arrItem[2],#}
+                tooltip: '<b>%name<b/> <br/>New Cases: ' + arrItem[1]+ '<br/>Cumulative Cases: ' + arrItem[2]+ '<br/>New Deaths: ' + arrItem[3]+ '<br/>Cumulative Deaths: ' + arrItem[4],
+              };
+            })
+          }
+        ]
+      });
+    </script>

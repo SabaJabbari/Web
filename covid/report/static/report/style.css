@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+:root {
+  padding: 0;
+}
+
+* {
+  text-align: left;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  background: #eaeaea;
+}
+
+button {
+  border-style: solid;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: contents;
+  cursor: pointer;
+}
+
+li {
+  display: inline;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+input[type=date] {
+  display: inline-block;
+  position: relative;
+  padding: 10px 45px 10px 5px;
+  width: 100%;
+  font-size: 15px;
+  border: 1px solid #b1bac4;
+  border-radius: 10px;
+  background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='22' viewBox='0 0 20 22'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23688EBB' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' transform='translate(1 1)'%3E%3Crect width='18' height='18' y='2' rx='2'/%3E%3Cpath d='M13 0L13 4M5 0L5 4M0 8L18 8'/%3E%3C/g%3E%3C/svg%3E") right 1rem center no-repeat;
+  cursor: pointer;
+}
+
+input[type=date]:focus {
+  outline: none;
+  border-color: #ee4c7c;
+}
+
+::-webkit-datetime-edit-month-field:hover,
+::-webkit-datetime-edit-day-field:hover,
+::-webkit-datetime-edit-year-field:hover {
+  background: rgba(0, 120, 250, 0.1);
+}
+
+::-webkit-datetime-edit-text {
+  opacity: 0;
+}
+
+::-webkit-clear-button,
+::-webkit-inner-spin-button {
+  display: none;
+}
+
+::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 35px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+  color: #b1bac4;
+  background: #b1bac4;
+}
+
+input[type=date]:hover::-webkit-calendar-picker-indicator {
+  opacity: 0.05;
+}
+
+input[type=date]:hover::-webkit-calendar-picker-indicator:hover {
+  opacity: 0.15;
+}
+
+select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  width: 100%;
+  font-size: 15px;
+  padding: 10px 45px 10px 5px;
+  cursor: pointer;
+  border: 1px solid #b1bac4;
+  border-radius: 10px;
+  background: white url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") right 1rem center no-repeat;
+}
+select option {
+  max-width: 10px;
+}
+
+select.option {
+  background-color: black;
+}
+
+.my-button {
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  color: #9a1750;
+  border: 1px solid #9a1750;
+  box-shadow: none;
+  padding: 10px 20px;
+  background-color: transparent;
+}
+.my-button:hover {
+  background-color: #9a1750;
+  color: #f0f0f0;
+  transition: all 0.4s;
+}
+
+.chart {
+  display: grid;
+  width: 100%;
+  column-gap: 50px;
+  grid-template-columns: 1fr;
+  transition: 2s;
+}
+.chart .chartItem {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+.chart .chartItem > div > svg > g > g > path {
+  fill: transparent;
+}
+.chart .chartItem > div > svg > g > g > g > g > g > g > g > g > g tspan {
+  font-size: 16px;
+  font-weight: bold;
+}
+.chart .chartItem > div > svg > g > g > g > g > g > g > g > g > g > g > g > g > g > g tspan {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+main .container {
+  flex-direction: row;
+  gap: 40px;
+}
+main .filter {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 15px 10px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  border: 1px solid #b1bac4;
+  width: 400px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  bottom: 0;
+  height: calc(100vh - 100px);
+  min-height: 250px;
+}
+main .filter .filter-title {
+  font-weight: bold;
+  font-size: 19px;
+  margin-left: 10px;
+}
+main .filter .form-control {
+  display: flex;
+  flex-direction: column;
+  background-color: unset;
+  height: 100%;
+  gap: 10px;
+  border: unset;
+}
+main .filter .form-control .space {
+  flex-grow: 1;
+}
+main .root-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  margin-top: -50px;
+  gap: 30px;
+}
+main .root-body h2 {
+  color: #9a1750;
+  text-align: start;
+  font-weight: bold;
+  font-size: 26px;
+  margin-left: 25px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+main .root-body table {
+  margin-left: 20px;
+  width: 100%;
+}
+main .root-body table th, main .root-body table td {
+  padding: 10px;
+  border: 1px dashed #b1bac4;
+}
+
+header {
+  padding: 20px 0;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav > div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+header nav > div h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5d001e;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+header nav ul li:hover {
+  color: #9a1750;
+}
+header .logo {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  filter: invert(7%) sepia(80%) saturate(3966%) hue-rotate(322deg) brightness(100%) contrast(121%);
+}
+
+.map .mapItem {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  width: 100%;
+  height: 600px;
+  padding: 10px;
+  margin: 10px;
+}
+.map .mapItem > div > svg > g > g > path {
+  fill: transparent;
+}
+
+.blogs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.blogs .blog {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+}
+.blogs .blog h6 {
+  font-weight: bold;
+  font-size: 16px;
+}
+.blogs .blog .blog-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.blogs .blog .blog-header span {
+  color: #b1bac4;
+  font-weight: normal;
+  font-size: 13px;
+}
+.blogs .blog p {
+  font-size: 13px;
+  color: #b1bac4;
+}
+
+/*# sourceMappingURL=style.css.map */
